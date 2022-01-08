@@ -14,15 +14,14 @@ let prefix = ",";
 let tickets = [];
 
 function binPost(message,user){
-  user.createDM().then(async (dm) => {
-    let embed = message.embeds[0]
-    let text = embed.fields[0]["description"]
-    text = text.replace("<@","")
-    text = text.replace(">","")
-    dm.send(text)
-
+  // user.createDM().then(async (dm) => {
+  //   let embed = message.embeds[0]
+  //   let text = embed.fields[0]["description"]
+  //   text = text.replace("<@","")
+  //   text = text.replace(">","")
+  //   dm.send(text)
+  // })
     message.delete()    
-  })
 }
 
 bot.on("messageReactionAdd", async (msg, user) => {
