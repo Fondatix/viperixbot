@@ -692,22 +692,6 @@ bot.on("messageCreate", async (msg) => {
   if (msg.content.toLowerCase().startsWith(prefix)) {
     var args = msg.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
-      case "tickets":
-        var string = ""
-        tickets.forEach(function (entry) {
-          string = string+entry+","
-        });
-        msg.channel.send("e")
-        msg.channel.send(string)
-    }
-  }
-})
-
-
-bot.on("messageCreate", async (msg) => {
-  if (msg.content.toLowerCase().startsWith(prefix)) {
-    var args = msg.content.substring(prefix.length).split(" ");
-    switch (args[0].toLowerCase()) {
       case "ticket":
         if (!tickets.includes(msg.author.id)) {
           tickets.push(msg.author.id);
