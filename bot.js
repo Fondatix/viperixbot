@@ -855,6 +855,7 @@ bot.on("messageCreate", async (msg) => {
                 } else if (i.customId == "Cancel") {
                   Function = cancelledFunc;
                   ongoing = false;
+                  dm.send("ASD")
                   collector.stop()
                 }
               } else if (stage == 2) {
