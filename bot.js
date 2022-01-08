@@ -855,7 +855,6 @@ bot.on("messageCreate", async (msg) => {
                 } else if (i.customId == "Cancel") {
                   Function = cancelledFunc;
                   ongoing = false;
-                  dm.send("ASD")
                   collector.stop()
                 }
               } else if (stage == 2) {
@@ -898,6 +897,7 @@ bot.on("messageCreate", async (msg) => {
                   } else if (i.customId == "Cancel") {
                     ongoing = false;
                     Function = cancelledFunc;
+                    collector.stop()
                   }
                 }
               } else if (stage == 4) {
@@ -905,6 +905,7 @@ bot.on("messageCreate", async (msg) => {
                   if (i.customId == "Cancel") {
                     ongoing = false;
                     Function = cancelledFunc;
+                    collector.stop()
                   }
                 }
               } else if (stage == 5) {
@@ -912,6 +913,7 @@ bot.on("messageCreate", async (msg) => {
                   if (i.customId == "Cancel") {
                     ongoing = false;
                     Function = cancelledFunc;
+                    collector.stop()
                   }
                 }
               } else if (stage == 6) {
@@ -919,6 +921,7 @@ bot.on("messageCreate", async (msg) => {
                   if (i.customId == "Cancel") {
                     ongoing = false;
                     Function = cancelledFunc;
+                    collector.stop()
                   }
                 }
               }
