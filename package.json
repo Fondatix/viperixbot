@@ -1,0 +1,22 @@
+{
+    "name": "discord.js",
+    "version": "13.5.0",
+    "description": "discord bot",
+    "main": "1",
+    "scripts": {
+      "test": "e"
+    },
+    "repository": {
+      "type": "git",
+      "url": "e"
+    },
+    "keywords": [
+      "e"
+    ],
+    "author": "e",
+    "license": "UNLICENSED",
+    "dependencies": {
+      "discord.js": "^13.5.1"
+    }
+  }
+  
