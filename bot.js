@@ -1,5 +1,3 @@
-console.log("df")
-
 const disc = require("discord.js");
 const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 const bot = new disc.Client({
