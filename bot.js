@@ -1005,4 +1005,4 @@ bot.on("ready", async () => {
     .catch(console.error);
 });
 
-bot.login("NjIyNjk0MTg5MTEyNDkyMDQz.XX3nJw.cp7v1sYOSO3XoVIEYwIRgvRKyVY");
+bot.login("NjIyNjk0MTg5MTEyNDkyMDQz.XX3nJw.cp7v1sYOSO3XoVIEYwIRgvRKyVY")
