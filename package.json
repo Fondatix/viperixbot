@@ -1,23 +1,25 @@
 {
-    "name": "discord.js",
-    "version": "13.5.0",
-    "description": "discord bot",
-    "main": "1",
-    "scripts": {
-      "test": "e",
-      "start": "node bot.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "e"
-    },
-    "keywords": [
-      "e"
-    ],
-    "author": "e",
-    "license": "UNLICENSED",
-    "dependencies": {
-      "discord.js": "^13.5.1"
-    }
+  "name": "discord.js",
+  "version": "13.5.0",
+  "description": "discord bot",
+  "main": "1",
+  "scripts": {
+    "test": "e",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "e"
+  },
+  "engines": {
+    "node": "17.3.0"
+  },
+  "keywords": [
+    "e"
+  ],
+  "author": "e",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "discord.js": "^13.5.1"
   }
-  
+}
