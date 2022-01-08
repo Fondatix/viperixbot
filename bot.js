@@ -881,6 +881,7 @@ bot.on("messageCreate", async (msg) => {
                         text: msg.author.username,
                         iconURL: msg.author.avatarURL(),
                       });
+                    ongoing = false
                     Function = message;
                     IsFunction = false;
                   } else if (i.customId == "Cancel") {
@@ -938,7 +939,7 @@ bot.on("messageCreate", async (msg) => {
             });
 
             collector.on("end", (collected) => {
-              if (handled != stage) {
+              if (handled != stage & !ongoing) {
                 ongoing = false;
                 endedFunc(msg.author, dm);
               }
