@@ -64,9 +64,9 @@ bot.on("messageCreate", async (msg) => {
               )
               .setDescription(
                 message +
-                  "\n\n**Answer in <#789401720962809886>**.\nQOTD sent by <@" +
-                  msg.author.id +
-                  ">."
+                "\n\n**Answer in <#789401720962809886>**.\nQOTD sent by <@" +
+                msg.author.id +
+                ">."
               )
               .setTimestamp()
               .setFooter({
@@ -605,8 +605,8 @@ bot.on("messageCreate", async (msg) => {
                           )
                           .setDescription(
                             "What do you want the " +
-                              type +
-                              " of this field to be?\n\n Respond with `cancel` to cancel this prompt."
+                            type +
+                            " of this field to be?\n\n Respond with `cancel` to cancel this prompt."
                           )
                           .setTimestamp()
                           .setFooter({
@@ -687,6 +687,19 @@ bot.on("messageCreate", async (msg) => {
     }
   }
 });
+
+bot.on("messageCreate", async (msg) => {
+  if (msg.content.toLowerCase().startsWith(prefix)) {
+    var args = msg.content.substring(prefix.length).split(" ");
+    switch (args[0].toLowerCase()) {
+      case "tickets":
+        tickets.forEach(function (entry) {
+          console.log(entry);
+        });
+    }
+  }
+})
+
 
 bot.on("messageCreate", async (msg) => {
   if (msg.content.toLowerCase().startsWith(prefix)) {
