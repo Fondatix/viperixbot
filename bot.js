@@ -13,6 +13,18 @@ const bot = new disc.Client({
 let prefix = ",";
 let tickets = [];
 
+function binPost(message,user){
+  user.createDM().then(async (dm) => {
+    let embed = message.embeds[0]
+    let text = embed.fields[0]["description"]
+    text = text.replace("<@","")
+    text = text.replace(">","")
+    dm.send(text)
+
+    message.delete()    
+  })
+}
+
 bot.on("messageReactionAdd", async (msg, user) => {
   if (user.bot) {
     return;
@@ -21,7 +33,7 @@ bot.on("messageReactionAdd", async (msg, user) => {
     msg.message.channel.id == "928793358833426472" ||
     msg.message.channel.id == "928795403472756816"
   ) {
-    msg.message.delete();
+    binPost(message,user)
   }
 });
 
@@ -823,6 +835,7 @@ bot.on("messageCreate", async (msg) => {
 
                     Function = thankYou;
                     ongoing = false;
+                    collector.stop()
                   }
                 }
                 if (processed) {
@@ -978,7 +991,7 @@ bot.on("ready", async () => {
           reaction.users.fetch().then(async (users) => {
             users.forEach(async (user) => {
               if (user.bot) return;
-              message.delete();
+              binPost(message,user)
               return;
             });
           });
@@ -1000,7 +1013,7 @@ bot.on("ready", async () => {
             reaction.users.fetch().then(async (users) => {
               users.forEach(async (user) => {
                 if (user.bot) return;
-                message.delete();
+                binPost(message,user)
                 return;
               });
             });
