@@ -4,7 +4,8 @@
     "description": "discord bot",
     "main": "1",
     "scripts": {
-      "test": "e"
+      "test": "e",
+      "start": "bot.js"
     },
     "repository": {
       "type": "git",
