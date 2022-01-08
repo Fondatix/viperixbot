@@ -751,7 +751,7 @@ bot.on("messageCreate", async (msg) => {
 
             let mCollector = dm.createMessageCollector({
               filter: filter,
-              time: 180000,
+              time: 18000 ,
             });
 
             let handled = 0;
@@ -763,7 +763,7 @@ bot.on("messageCreate", async (msg) => {
             let selected5;
             let selected6;
 
-            let ongoing = true;
+            var ongoing = true;
             let prevMessage;
 
             mCollector.on("collect", async (i) => {
