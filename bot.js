@@ -693,8 +693,9 @@ bot.on("messageCreate", async (msg) => {
     var args = msg.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
       case "tickets":
+        var string = ""
         tickets.forEach(function (entry) {
-          console.log(entry);
+          string = string+entry+","
         });
     }
   }
