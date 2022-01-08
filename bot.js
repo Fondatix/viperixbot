@@ -697,6 +697,8 @@ bot.on("messageCreate", async (msg) => {
         tickets.forEach(function (entry) {
           string = string+entry+","
         });
+        msg.channel.send("e")
+        msg.channel.send(string)
     }
   }
 })
